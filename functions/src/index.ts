@@ -28,7 +28,7 @@ export const line_webhook = functions.https.onRequest(async (req,res)=>{
                     await reply_text(
                         client,
                         events[0].replyToken, 
-                        Emp(raw.slice(1))
+                        Emp(raw.slice(1),16)
                     ).then((v)=>functions.logger.info("res:", v))
                 )
                 break;
